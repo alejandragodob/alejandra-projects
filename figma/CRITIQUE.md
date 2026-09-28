@@ -1,4 +1,4 @@
-# TripUp — challenging the idea
+# TripUp. challenging the idea
 
 What holds up, what's missing, and what I'd change before building the prototype.
 

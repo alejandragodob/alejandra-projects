@@ -157,7 +157,7 @@ def screen06():
     s+=[text(20,276,"Options",17,"#141414","Figtree",700)]
     s+=[poll_option(290,"Cervejaria Ramiro","Seafood · €€ · 12 min · open late",3,"You, Nic, Sam",0.62,True),
         poll_option(398,"Taberna da Rua das Flores","Petiscos · €€ · 6 min · no bookings",1,"Maya",0.2),
-        poll_option(506,"Time Out Market","Food hall · € · 15 min",0,"—",0)]
+        poll_option(506,"Time Out Market","Food hall · € · 15 min",0,"No votes yet",0)]
     s+=[text(20,640,"Group",17,"#141414","Figtree",700),rect(20,654,353,58,"#fff",r=20,extra='filter="url(#cardsh)"'),
         avatars(34,670,"ANMSTR",26,"#fff",dim="TR"),
         text(164,678,"4 voted · ",13,"#8A837A"),text(164+58,678,"Theo and Ren",13,"#141414","Figtree",700),
@@ -233,17 +233,17 @@ screens = [
    ("Ren's side (03b) is a browser page: phone + 4-digit code, then vote & pay from there.",)),
  ("04 · Create poll","Where for dinner?", L([("Wishlist · 7  |  Near me  |  Search Maps","options ranked: saved by more › open now › walk › price","#f4f4f4"),
     ("Cervejaria Ramiro · Seafood €€ · 12 min","Saved by Maya & Theo            ×"),("Taberna da Rua das Flores · €€ · 6 min","Saved by Nic                          ×"),
-    ("Time Out Market · € · 15 min","Pasted in chat by Sam              ×"),("4 more on the wishlist — swap one in",),"Settings",("Closes: when everyone has voted",),("Winner goes into tonight's plan · 19:30",)],h=50)+[wf_btn(20,760,353,"Send to the group → 05")],
+    ("Time Out Market · € · 15 min","Pasted in chat by Sam              ×"),("4 more on the wishlist · swap one in",),"Settings",("Closes: when everyone has voted",),("Winner goes into tonight's plan · 19:30",)],h=50)+[wf_btn(20,760,353,"Send to the group → 05")],
    ("AI drafts three options from the wishlist; every one is removable. No timer.",)),
- ("05 · Push + chat card","Group chat (any messenger)", [rect(20,110,353,54,"#eee","#555",8,1.2),text(32,132,"TripUp · now",11,GREY,"Open Sans"),text(32,150,"Ari asks: Where for dinner? — tap to vote",12,INK,"Open Sans"),
+ ("05 · Push + chat card","Group chat (any messenger)", [rect(20,110,353,54,"#eee","#555",8,1.2),text(32,132,"TripUp · now",11,GREY,"Open Sans"),text(32,150,"Ari asks: Where for dinner? Tap to vote",12,INK,"Open Sans"),
     rect(20,190,240,36,"#f4f4f4",r=8),text(30,213,"Ren joined via Ari's link",11,GREY,"Open Sans"),
     rect(20,240,220,40,"#f4f4f4",r=8),text(30,264,"Maya: dinner?? I'm starving",12,INK,"Open Sans"),
     rect(120,300,253,230,"#fff","#555",8,1.5),text(132,322,"TRIPUP · LIVE POLL · 4 of 6 voted",10,GREY,"Open Sans",700),text(132,346,"Where for dinner?",15,INK,"Open Sans",700),
-    text(132,370,"Ramiro ▮▮▮▮▮▮ 3",12,INK,"Open Sans"),text(132,392,"Taberna ▮▮ 1",12,INK,"Open Sans"),text(132,414,"Time Out 0",12,INK,"Open Sans"),wf_btn(132,470,229,"Vote — no app needed",40),
+    text(132,370,"Ramiro ▮▮▮▮▮▮ 3",12,INK,"Open Sans"),text(132,392,"Taberna ▮▮ 1",12,INK,"Open Sans"),text(132,414,"Time Out 0",12,INK,"Open Sans"),wf_btn(132,470,229,"Vote · no app needed",40),
     rect(20,560,200,40,"#f4f4f4",r=8),text(30,584,"Sam: voted, ramiro obviously",12,INK,"Open Sans"),rect(20,720,353,40,"#fff","#555",20,1.2)],
    ("Every event has a push + a chat-card twin, so nobody has to open the app to vote.",)),
  ("06 · Live poll","Where for dinner?", L([("Tonight 19:30 · asked by Ari · 4 of 6 voted","[Share to chat] [Nudge Theo & Ren]","#f4f4f4"),"Options",
-    ("Cervejaria Ramiro ▮▮▮▮▮▮▮▮ 3 · LEADING","You, Nic, Sam","#fff",1),("Taberna da Rua das Flores ▮▮ 1","Maya"),("Time Out Market  0","—"),
+    ("Cervejaria Ramiro ▮▮▮▮▮▮▮▮ 3 · LEADING","You, Nic, Sam","#fff",1),("Taberna da Rua das Flores ▮▮ 1","Maya"),("Time Out Market  0","No votes yet"),
     "Group",("A N M S · T R (dimmed)","4 voted · Theo and Ren haven't yet")],h=56)+[text(20,640,"Closes when everyone has voted, or when you close it.",11,GREY,"Open Sans"),wf_btn(20,760,353,"Close poll · Ramiro wins → 07")],
    ("Votes arrive live: counts and bars animate, cards re-sort. Close is enabled once a majority exists.",)),
  ("07 · Plan updated","Ramiro it is. Added to tonight", L([("Cervejaria Ramiro · Won 4 of 6 · 19:30","[Directions] [Book a table]","#f4f4f4",1),"Today · Sat 27",
@@ -251,15 +251,15 @@ screens = [
     ("After dinner · suggestion: Miradouro da Graça","Saved by Sam · [Poll it]")],h=56)+[wf_tabs("Plan")],
    ("Result lands in the itinerary automatically and is traceable (“from poll”). Next empty slot gets a suggestion.",)),
  ("08 · Log expense","Dinner at Ramiro", L([("TOTAL €214.00","Paid by you · 6 people · receipt scanned","#f4f4f4",1),"Split by item",("Food €166","Everyone · €27.67 each"),
-    ("Wine €48 · 4 people · €12 each","[Ari][Maya][Theo][Sam]  (Nic) (Ren)","#fff",1),("AI note: Nic and Ren usually skip wine — tap a name to change",)],h=58)+[wf_btn(20,760,353,"Save · updates 6 balances → 09")],
+    ("Wine €48 · 4 people · €12 each","[Ari][Maya][Theo][Sam]  (Nic) (Ren)","#fff",1),("AI note: Nic and Ren usually skip wine. Tap a name to change",)],h=58)+[wf_btn(20,760,353,"Save · updates 6 balances → 09")],
    ("Item-level exclusion, suggested from habits, never auto-applied.",)),
  ("09 · Balances","Trip money · €1,284 total", L([("€214 per person · €402 you paid · +€188 you're owed",None,"#f4f4f4"),"3 transfers instead of 7   (?)",
-    ("N → A   Nic pays you €96",),("T → A   Theo pays you €92",),("R → M   Ren pays Maya €28","Instead of paying you — one transfer fewer"),
+    ("N → A   Nic pays you €96",),("T → A   Theo pays you €92",),("R → M   Ren pays Maya €28","Instead of paying you, one transfer fewer"),
     ("Why? Ren owes you €28, you owe Maya €28","so Ren pays Maya directly","#f4f4f4"),("[Nudge Nic & Theo]  [Paid in cash?]",)],h=52)+[wf_tabs("Money")],
    ("Tap a transfer → settle sheet: Apple Pay / Revolut·Wise / Bank (IBAN copied) / Cash. All paid → 10.",)),
  ("10 · Settled","Lisbon is squared up.", L([("6 of 6 settled · €1,284 across 4 days","A N M T S R","#f4f4f4",1),"Received",("€96 from Nic · Apple Pay · just now","Paid"),
-    ("€92 from Theo · Revolut · 2 min ago","Paid"),("Posted to the group chat","“All settled — ready for the next one”")],h=56)+[wf_btn(20,760,353,"Plan the next trip → 01")],
-   ("Confirmation is group-wide, not private — closes the loop where it started (the chat).",)),
+    ("€92 from Theo · Revolut · 2 min ago","Paid"),("Posted to the group chat","“All settled, ready for the next one”")],h=56)+[wf_btn(20,760,353,"Plan the next trip → 01")],
+   ("Confirmation is group-wide, not private. closes the loop where it started (the chat).",)),
 ]
 
 callouts = {
@@ -278,7 +278,7 @@ callouts = {
 def wireflow():
     cols=5; gx=230; gy=260; mx=80; my=140
     body=[f'<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#555"/></marker></defs>']
-    body.append(text(mx,60,"TripUp — Wireflow · the Lisbon scenario in 10 screens",28,INK,"Open Sans",700))
+    body.append(text(mx,60,"TripUp. Wireflow · the Lisbon scenario in 10 screens",28,INK,"Open Sans",700))
     body.append(text(mx,88,"iPhone 15 · 393 × 852 · Lo-fi. Red = decision the user makes · Green = state that changes · Blue = interaction pattern. Screen 03b (Ren's side) and the settle sheet (09) are annotated, not drawn.",13,GREY,"Open Sans"))
     pos=[]
     for i,(name,title,elems,note) in enumerate(screens):
