@@ -1,4 +1,4 @@
-# Git-Intro
+# TripUp
 Learn Git by making a simple visual change. A beginner friendly repo for designers.
 
 ## The full designer Git workflow (GitHub Desktop)
